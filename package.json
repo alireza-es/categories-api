@@ -10,8 +10,8 @@
     "node": ">=12.0.0"
   },
   "scripts": {
-    "start": "pm2 start ecosystem.config.json --no-daemon",
-    "dev": "cross-env NODE_ENV=development nodemon src/index.js"
+    "prod": "pm2 start ecosystem.config.json --no-daemon",
+    "start": "cross-env NODE_ENV=development nodemon src/index.js"
   },
   "keywords": [
     "node.js",
@@ -37,8 +37,11 @@
     "joi": "^17.3.0",
     "jsonwebtoken": "^8.5.1",
     "moment": "^2.24.0",
+    "morgan": "^1.10.0",
     "nodemailer": "^6.3.1",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "pm2": "^5.2.0",
+    "winston": "^3.6.0"
   },
   "devDependencies": {
     "coveralls": "^3.0.7",

@@ -1,16 +1,15 @@
-const app = require('./app');
-const config = require('./config/config');
+const app = require("./app");
+const config = require("./config/config");
+const logger = require("./config/logger");
 
 const server = app.listen(config.port, () => {
-  // eslint-disable-next-line no-console
-  console.log(`Listening to port ${config.port}`);
+  logger.info(`Listening to port ${config.port}`);
 });
 
 const exitHandler = () => {
   if (server) {
     server.close(() => {
-      // eslint-disable-next-line no-console
-      console.log('Server closed');
+      logger.info("Server closed");
       process.exit(1);
     });
   } else {
@@ -19,10 +18,9 @@ const exitHandler = () => {
 };
 
 const unexpectedErrorHandler = (error) => {
-  // eslint-disable-next-line no-console
-  console.error(error);
+  logger.error(error);
   exitHandler();
 };
 
-process.on('uncaughtException', unexpectedErrorHandler);
-process.on('unhandledRejection', unexpectedErrorHandler);
+process.on("uncaughtException", unexpectedErrorHandler);
+process.on("unhandledRejection", unexpectedErrorHandler);
