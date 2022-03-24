@@ -1,0 +1,48 @@
+{
+  "name": "categories-api",
+  "version": "1.0.0",
+  "description": "A Node.js app for RESTful APIs using Express, to manage categories",
+  "main": "src/index.js",
+  "repository": "git@github.com:alireza-es/categories-api.git",
+  "author": "Alireza Esmaeili <alireza.es@gmail.com>",
+  "license": "MIT",
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "scripts": {
+    "start": "pm2 start ecosystem.config.json --no-daemon",
+    "dev": "cross-env NODE_ENV=development nodemon src/index.js"
+  },
+  "keywords": [
+    "node.js",
+    "generator",
+    "express",
+    "rest",
+    "api",
+    "es6",
+    "es7",
+    "es8",
+    "es9"
+  ],
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "cross-env": "^7.0.0",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-rate-limit": "^5.0.0",
+    "helmet": "^4.1.0",
+    "http-status": "^1.4.0",
+    "joi": "^17.3.0",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.24.0",
+    "nodemailer": "^6.3.1",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "coveralls": "^3.0.7",
+    "node-mocks-http": "^1.8.0",
+    "nodemon": "^2.0.0"
+  }
+}
