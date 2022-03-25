@@ -1,0 +1,44 @@
+{
+	"info": {
+		"_postman_id": "e9d08738-6647-44a9-8681-1d8daed29576",
+		"name": "categories-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get-categories",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/categories",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-category",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/categories/9",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"categories",
+						"9"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

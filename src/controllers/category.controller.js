@@ -1,12 +1,10 @@
 const httpStatus = require('http-status');
-const pick = require('../utils/pick');
 const ApiError = require('../utils/ApiError');
 const catchAsync = require('../utils/catchAsync');
 const { categoryService } = require('../services');
 
-const getCategories = catchAsync(async (req, res) => {
-  const filter = pick(req.query, ['filter']);
-  const result = await categoryService.queryCategories(filter);
+const getAllCategories = catchAsync(async (req, res) => {
+  const result = await categoryService.queryAllCategories();
   res.send(result);
 });
 
@@ -19,6 +17,6 @@ const getCategory = catchAsync(async (req, res) => {
 });
 
 module.exports = {
-  getCategories,
+  getAllCategories,
   getCategory,
 };
