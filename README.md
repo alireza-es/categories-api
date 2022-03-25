@@ -1,6 +1,22 @@
 # RESTful API Node Server for categories
+## Task
+Build simple RESTful API to return the category tree (recursively) with filter parameter function:
 
-## Quick Start
+- api/categories -> return full category tree
+- api/categories?id=1 -> return category tree with the root node as id = 1
+  
+``` js
+Category1
+-----Subcategories
+--------Subcategories
+-----Subcategories
+Category2
+----Subcategories2
+Category3
+----Subcategories3
+----------Subcategories33
+``` 
+## Install
 Install the dependencies:
 
 ```bash
