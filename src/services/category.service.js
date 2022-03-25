@@ -1,4 +1,6 @@
+const { Category } = require('../models');
 const logger = require('../config/logger');
+
 /**
  * Query for categorys
  * @param {Object} filter - Mongo filter
@@ -6,7 +8,7 @@ const logger = require('../config/logger');
  */
 const queryCategories = async (filter) => {
   logger.info(`Querying categories. filter:${JSON.stringify(filter)}`);
-  throw new Error('Not implemented');
+  return Category.findAll();
 };
 
 /**

@@ -16,6 +16,11 @@
     "test:watch": "jest -i --watchAll",
     "coverage": "jest -i --coverage",
     "coverage:coveralls": "jest -i --coverage --coverageReporters=text-lcov | coveralls",
+    "db:migration:create": "node_modules/.bin/sequelize migration:create --name=migration-name",
+    "db:migrate:undo": "node_modules/.bin/sequelize db:migrate:undo:all",
+    "db:migrate": "node_modules/.bin/sequelize db:migrate && NODE_ENV=development",
+    "db:seed": "node_modules/.bin/sequelize db:seed:all && NODE_ENV=development",
+    "db:seed:undo": "node_modules/.bin/sequelize db:seed:undo && NODE_ENV=development",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "prettier": "prettier --check **/*.js",
@@ -40,8 +45,6 @@
     "cross-env": "^7.0.0",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
-    "express-list-endpoints": "^6.0.0",
-    "express-rate-limit": "^5.0.0",
     "helmet": "^4.1.0",
     "http-status": "^1.4.0",
     "joi": "^17.3.0",
@@ -50,7 +53,10 @@
     "morgan": "^1.10.0",
     "nodemailer": "^6.3.1",
     "path": "^0.12.7",
+    "pg": "^8.7.3",
     "pm2": "^5.2.0",
+    "reflect-metadata": "^0.1.13",
+    "sequelize": "^6.17.0",
     "winston": "^3.6.0"
   },
   "devDependencies": {
@@ -67,6 +73,8 @@
     "lint-staged": "^11.0.0",
     "node-mocks-http": "^1.8.0",
     "nodemon": "^2.0.0",
-    "prettier": "^2.0.5"
+    "prettier": "^2.0.5",
+    "sequelize-cli": "^6.4.1",
+    "sqlite3": "^5.0.2"
   }
 }
