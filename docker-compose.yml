@@ -5,7 +5,7 @@ services:
     build: .
     image: node-app
     environment:
-      - DB_HOST=db
+      - DB_HOST=postgres-db
       - DB_USER=postgres
       - DB_PASS=123456
       - DB_NAME=categories_db
