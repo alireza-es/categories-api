@@ -28,6 +28,8 @@ services:
       - 5432:5432
     volumes:
       - dbdata:/data/db
+      # copy the sql script to create tables
+      - ./sql/create-db.sql:/docker-entrypoint-initdb.d/create-db.sql
     networks:
       - node-network
 

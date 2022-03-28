@@ -13,4 +13,5 @@ RUN yarn install --pure-lockfile
 COPY --chown=node:node . .
 
 EXPOSE 3000
-CMD yarn start
+
+CMD yarn db:migrate && yarn db:seed && yarn start

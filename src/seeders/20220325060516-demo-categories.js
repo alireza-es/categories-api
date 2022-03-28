@@ -29,6 +29,9 @@ module.exports = {
               {
                 name: 'Grandchild category112',
               },
+              {
+                name: 'Grandchild category113',
+              },
             ],
           },
           {
